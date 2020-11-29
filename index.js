@@ -103,7 +103,7 @@ const mockData =  [
   }
 ];
 
-/** sorts so that parents come before children
+/** sort object array so that parents come before children
  * @param: categories. object array
  * @return: object array
 */
@@ -142,12 +142,12 @@ function sortByParentsFirst(categories) {
     if (parsedCategories.length === 0) { fullySorted = true; }
   }
 
-  const jsonString = JSON.stringify(sortedResults)
+  const jsonString = sortedResults
 
   return jsonString;
 }
 
-// const results = sortByParentsFirst(mockData);
-// console.log('results', results);
+const results = sortByParentsFirst(mockData);
+console.log('results', results);
 
 module.exports = sortByParentsFirst;
