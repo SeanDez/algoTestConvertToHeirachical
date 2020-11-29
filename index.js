@@ -108,7 +108,7 @@ const mockData =  [
  * @return: object array
 */
 function sortByParentsFirst(categories) {
-  const parsedCategories = JSON.parse(categories);
+  const parsedCategories = categories;
 
   // type guard against non-array data type
   if (Array.isArray(parsedCategories) === false) { return []; }
@@ -142,7 +142,7 @@ function sortByParentsFirst(categories) {
     if (parsedCategories.length === 0) { fullySorted = true; }
   }
 
-  const jsonString = sortedResults
+  const jsonString = JSON.stringify(sortedResults);
 
   return jsonString;
 }
